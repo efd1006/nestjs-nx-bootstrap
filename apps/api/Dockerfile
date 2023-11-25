@@ -3,7 +3,7 @@ FROM docker.io/node:20-alpine@sha256:cb2301e2c5fe3165ba2616591efe53b4b6223849ac0
 # Check https://github.com/nodejs/docker-node/tree/b4117f9333da4138b03a546ec926ef50a31506c3#nodealpine to understand why libc6-compat might be needed.
 RUN apk add --no-cache libc6-compat
 WORKDIR /usr/src/app
-COPY dist/apps/api/package*.json yarn.lock ./
+COPY package*.json yarn.lock ./
 RUN yarn install --frozen-lockfile --non-interactive --prod
 
 # Production image
