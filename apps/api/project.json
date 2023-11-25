@@ -27,7 +27,9 @@
       "executor": "@nx/js:node",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "api:build"
+        "buildTarget": "api:build",
+        "inspect": "inspect",
+        "port": 13330
       },
       "configurations": {
         "development": {
